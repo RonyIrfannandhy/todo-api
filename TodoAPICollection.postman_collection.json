@@ -1,0 +1,135 @@
+{
+  "info": {
+    "name": "Todo API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Todo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Contoh Todo\",\n  \"assignee\": \"Budi\",\n  \"due_date\": \"2025-05-28\",\n  \"time_tracked\": 0,\n  \"status\": \"in_progress\",\n  \"priority\": \"high\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/todos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chart by Status",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/api/todos/chart?type=status",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chart by Priority",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/api/todos/chart?type=priority",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "priority"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chart by Assignee",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/api/todos/chart?type=assignee",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "assignee"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Export Excel - Completed High Priority",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/api/todos/export?status=completed&priority=high",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos",
+            "export"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "completed"
+            },
+            {
+              "key": "priority",
+              "value": "high"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
