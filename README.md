@@ -43,7 +43,7 @@
 
 #### ✅ Create Todo
 
-![Create Todo](./Screenshots/create_todo.png)
+![Create Todo](./Screenshots/create-todo.png)
 
 #### 📊 Chart Status
 
@@ -63,7 +63,7 @@
 
 #### 📥 Export Excel
 
-![Export Excel](./Screenshots/export_excel.png)
+![Export Excel](./Screenshots/export_excell.png)
 
 ---
 
